@@ -32,12 +32,10 @@ const TableViewPage = () => {
         <TableBody>
           {posts?.map((post: Post) => (
             <TableRow>
-              <TableCell className="font-medium">{post.userId}</TableCell>
+              <TableCell>{post.userId}</TableCell>
               <TableCell>{post.id}</TableCell>
               <TableCell>{`${post.title.slice(0, 50)}...`}</TableCell>
-              <TableCell className="text-right">
-                {`${post.body.slice(0, 50)}...`}
-              </TableCell>
+              <TableCell>{`${post.body.slice(0, 50)}...`}</TableCell>
             </TableRow>
           ))}
         </TableBody>
